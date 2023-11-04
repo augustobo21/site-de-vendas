@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Administração</title>
+    <script src="js/upload_adm.js"></script>
+    <script src="js/excluir.js"></script>
+    <link rel="stylesheet" href="css/adm.css">
+</head>
+<body>
+    <div>
+        <h1>Cadastrar Produto</h1>
+        <form action="php/upload.php" method="post" onsubmit="enviarProduto(); return false;">
+            Imagem:
+            <input type="file" name="imagem" id="imagem" required><br>
+            Nome:
+            <input type="text" name="nome" id="nome" required><br>
+            Valor:
+            <input type="text" name="valor" id="valor" required><br>
+            <input type="submit" value="Cadastrar Produto" id="btnCadastrarProduto">
+        </form>
+    </div>
+
+    <div>
+    <h1>Excluir Produto</h1>
+        <form action="php/excluir.php" method="post" onsubmit="excluirProduto(); return false;" >
+            ID do Produto:
+            <input type="text" name="id_produto" id="id_produto" required><br>
+            <input type="submit" value="Excluir Produto" id="btnExcluirProduto">
+        </form>
+    </div>
+</body>
+</html> 
